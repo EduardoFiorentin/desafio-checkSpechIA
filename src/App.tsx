@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import './index.css'
+import { Header } from './pages/Header'
 
 function App() {
 
   return (
-    <div className='text-red-600'>
-      <h1 className=''>Hello, wold</h1>
-      <h1 className=''>Hello, wold</h1>
-      <h1 className=''>Hello, wold</h1>
-      <h1 className=''>Hello, wold</h1>
-    </div>
+    <>
+      <Header/>
+    </>
   )
 }
 
 export default App
+
