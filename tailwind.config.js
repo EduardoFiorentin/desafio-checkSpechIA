@@ -16,6 +16,10 @@ export default {
       },
       backgroundImage: {
         'header':"url('./src/assets/img/header-background.png')"
+      },
+      boxShadow: {
+        'button':"-2px 2px 16px 0px #7D63C666",
+        'circle': "0px 0px 3px 5px #7D63C688"
       }
     },
     fontFamily: {
