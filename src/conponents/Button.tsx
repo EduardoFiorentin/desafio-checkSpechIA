@@ -1,6 +1,6 @@
 type Button = {
     content: string, 
-    href: string,
+    href?: string,
     className: string,
     onClick?: React.MouseEventHandler<HTMLButtonElement>
 }

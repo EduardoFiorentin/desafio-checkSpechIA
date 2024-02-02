@@ -1,19 +1,47 @@
 
 import { PhoneInput } from 'react-international-phone';
-import InputWithIcon from '../conponents/InputWithIcon';
 import { useState } from 'react';
-
-import { useForm, SubmitHandler } from "react-hook-form"
 import { Button } from '../conponents/Button';
+
+import { emailValidate, messageValidate, nameValidate } from '../utils/validations';
 
 
 export const Contacts = () => {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-      } = useForm()
+
+    const [name, setName] = useState('')
+    const [errorName, setErrorName] = useState<string | null>(null)
+    const [phone, setPhone] = useState('')
+    // const [errorPhone, setErrorPhone] = useState<string | null>(null)
+    const [email, setEmail] = useState('')
+    const [errorEmail, setErrorEmail] = useState<string | null>(null)
+    const [message, setMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState<string | null>(null)
+    const [checked, setChecked] = useState(false)
+    const [errorChecked, setErrorChecked] = useState<string | null>(null)
+
+
+    const handleSubmit = () => {
+        if (!nameValidate(name)) {
+            console.log("nome não passa")
+            setErrorName("Nome não é válido!")
+        }
+        if (!emailValidate(email)) {
+            console.log("email não passa")
+            setErrorEmail("Email não é válido!")
+        }
+        if (!messageValidate(message)) {
+            console.log("message não passa")
+            setErrorMessage("Mensagem não é válida!")
+        }
+        if (!checked) {
+            setErrorChecked("Aceite os termos")
+        }
+
+        if (!errorName && !errorEmail && !errorMessage && checked) {
+            console.log("Passado")
+            window.alert("Mensagem enviada")
+        }
+    }
 
     return (
         <section className="bg-blue min-h-screen font-imprima">
@@ -27,21 +55,27 @@ export const Contacts = () => {
                         id=""
                         placeholder='Nome'
                         className='w-full p-[10px] h-[36px] rounded-3xl focus:outline-0 bg-inputblue border text-white border-black mb-[15px]'
+                        value={name}
+                        onFocus={() => setErrorName(null)}
+                        onChange={event => setName(event.target.value)}
                     />
                     <PhoneInput
                         defaultCountry="br"
-                        value={''}
-                        onChange={() => {}}
                         className='mb-[15px]'
+                        value={phone}
+                        onChange={phone => setPhone(phone)}
                     />
                 </div>
 
                 <input 
-                    type="text" 
+                    type="email" 
                     name="" 
                     id="" 
                     placeholder='Email'
                     className='w-full p-[10px] h-[36px] rounded-3xl focus:outline-0 bg-inputblue border border-black text-white mb-[15px]'
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                    onFocus={() => setErrorEmail(null)}
                 />
 
                 <textarea 
@@ -52,14 +86,30 @@ export const Contacts = () => {
                     cols={30} 
                     rows={10}
                     maxLength={180}
+                    value={message}
+                    onChange={event => setMessage(event.target.value)}
+                    onFocus={() => setErrorMessage(null)}
                 />
 
                 <div className="flex items-center w-full">
-                    <input type="checkbox" name="" id="" className='w-[20px] h-[20px] rounded' />
+                    <input type="checkbox" name="" id="" className='w-[20px] h-[20px] rounded' checked={checked} onChange={() => {setChecked(!checked)}} onFocus={() => setErrorChecked(null)}/>
                     <p className='text-[.8rem] ml-[10px] text-white'>Eu concordo com a Política de Privacidade.</p>
                 </div>
 
-                <Button className='text-lightpurple font-black shadow-none' content='Enviar' href='#' onClick={() => console.log("Hello, world")}/>
+                {errorName && (
+                    <p className='text-center'>Nome não é válido</p>
+                )}
+                {errorEmail && (
+                    <p className='text-center'>Email não é válido</p>
+                )}
+                {errorMessage && (
+                    <p className='text-center'>Mensagem não é válida</p>
+                )}
+                {errorChecked && (
+                    <p className='text-center'>Aceite os termos</p>
+                )}
+
+                <Button className='text-lightpurple font-black shadow-none' content='Enviar' onClick={handleSubmit}/>
             </div>
         </section>
     )

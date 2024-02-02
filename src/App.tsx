@@ -9,9 +9,9 @@ import { Contacts } from './pages/Contact';
 function App() {
   return (
     <>
-      {/* <Header/> */}
-      {/* <About/> */}
-      {/* <Solutions/> */}
+      <Header/>
+      <About/>
+      <Solutions/>
       <Subscription/>
       <Contacts/>
       
