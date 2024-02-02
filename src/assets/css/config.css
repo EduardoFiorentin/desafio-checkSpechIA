@@ -1,3 +1,46 @@
+
+
+/* MUI adjustments */
+/* #input-with-icon-textfield {
+    height: 36px;
+    padding: 0 8px;
+    color: white;
+}
+.css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
+    padding-left: 8px !important;
+}
+#input-with-icon-textfield {
+    padding-left: 3px !important;   
+    font-family: "Imprima" !important;
+} */
+
+/* PhoneInput adjustments */
+
 html {
     color: white;
+}
+
+.react-international-phone-input-container {
+    border-left: none !important;
+}
+.react-international-phone-input {
+    border-top-right-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
+    
+}
+.react-international-phone-input {
+    padding-left: 5px !important;
+    width: 100% !important;
+    font-family: "Imprima" !important;
+    background-color: #14438B !important;
+    color: white !important;
+    border-color: black !important;
+}
+.react-international-phone-country-selector-button {
+    border-color: black !important;
+    border-right: none !important;
+    background-color: #14438B !important;
+    border-bottom-left-radius: 1.5rem !important;
+    border-top-left-radius: 1.5rem !important;
+    padding-left: 5px !important;
 }

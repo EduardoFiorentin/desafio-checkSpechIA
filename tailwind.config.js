@@ -7,12 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'blue':'#002256',
+        'blue':"#002256",
+        'darkblue':"#041837",
         'purple': "#4A0FF3",
         'lightpurple': "#7D63C6",
         'lightblue': "#0769FF",
         'darkgrey': "#1E1E1E",
-        'cian': '#00DDFF'
+        "cian": "#00DDFF",
+        'transparent': "#ffffff88",
+        'inputblue': "#14438B",
+        'black': "#000000"
       },
       backgroundImage: {
         'header':"url('./src/assets/img/header-background.png')"

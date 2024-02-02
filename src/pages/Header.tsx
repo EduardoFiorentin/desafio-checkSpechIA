@@ -31,11 +31,11 @@ export const Header = () => {
             </nav>
 
             <div className='pt-[90px]'>
-                <p className='text-[2.7rem] h-4/5 text-center'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p>
+                <p className='text-[2.7rem] h-[370px] text-center'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p>
                 <img src="hidden" alt="" />
             </div>
 
-            <Button content="Saiba Mais" href="#"/>
+            <Button content="Saiba Mais" href="#" className='text-bold bg-purple'/>
         </header>
     )
 }
