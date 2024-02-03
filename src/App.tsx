@@ -5,6 +5,7 @@ import { Solutions } from './pages/Solutions'
 import { Subscription } from './pages/Subscriptions'
 import 'react-international-phone/style.css';
 import { Contacts } from './pages/Contact';
+import { Footer } from './pages/Footer';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Solutions/>
       <Subscription/>
       <Contacts/>
-      
+      <Footer/>
     </>
   )
 }

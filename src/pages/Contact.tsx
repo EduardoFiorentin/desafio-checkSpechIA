@@ -1,23 +1,34 @@
 
 import { PhoneInput } from 'react-international-phone';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from '../conponents/Button';
 
-import { emailValidate, messageValidate, nameValidate } from '../utils/validations';
+import { emailValidate, messageValidate, nameValidate, phoneValidate } from '../utils/validations';
+import { CountryCode } from 'libphonenumber-js';
 
 
 export const Contacts = () => {
 
     const [name, setName] = useState('')
     const [errorName, setErrorName] = useState<string | null>(null)
-    const [phone, setPhone] = useState('')
-    // const [errorPhone, setErrorPhone] = useState<string | null>(null)
     const [email, setEmail] = useState('')
     const [errorEmail, setErrorEmail] = useState<string | null>(null)
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState<string | null>(null)
     const [checked, setChecked] = useState(false)
     const [errorChecked, setErrorChecked] = useState<string | null>(null)
+    
+    const [phone, setPhone] = useState('')
+    const [errorPhone, setErrorPhone] = useState<string | null>(null)
+    const [countryCode, setCountryCode] = useState<CountryCode>('BR')
+    const inputRef = useRef(null);
+
+    const test = () => {
+        if (inputRef.current?.state?.country?.iso2.length == 2) {
+            console.log(2)
+        }
+    }
+
 
 
     const handleSubmit = () => {
@@ -37,6 +48,12 @@ export const Contacts = () => {
             setErrorChecked("Aceite os termos")
         }
 
+        // phone 
+        const iso = inputRef.current?.state?.country?.iso2.toUpperCase()
+        if (!phoneValidate(phone, iso)) {
+            console.log("Não passou")
+        }
+
         if (!errorName && !errorEmail && !errorMessage && checked) {
             console.log("Passado")
             window.alert("Mensagem enviada")
@@ -44,7 +61,7 @@ export const Contacts = () => {
     }
 
     return (
-        <section className="bg-blue min-h-screen font-imprima">
+        <section className="bg-blue min-h-screen font-imprima" id='contact'>
             <h2 className="text-center py-[40px] text-[40px]">Entre em <span className="font-bold">Contato</span></h2>
             <div className='w-[300px] mx-auto'>
 
@@ -62,8 +79,14 @@ export const Contacts = () => {
                     <PhoneInput
                         defaultCountry="br"
                         className='mb-[15px]'
+                        ref={inputRef}
                         value={phone}
-                        onChange={phone => setPhone(phone)}
+                        onChange={phone => {
+                            setPhone(phone)
+                            test()
+                        }
+                        }
+                        onBlur={() => test}
                     />
                 </div>
 

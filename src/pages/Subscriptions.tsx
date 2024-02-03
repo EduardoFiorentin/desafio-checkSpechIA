@@ -2,7 +2,7 @@ import { Button } from "../conponents/Button"
 
 export const Subscription = () => {
     return (
-        <section id="about" className="bg-blue min-h-screen">
+        <section id="subscriptions" className="bg-blue min-h-screen">
             <h2 className="text-center py-[40px] text-[40px]">Conheça nossos <span className="font-bold">Planos</span></h2>
             
             <div className="flex flex-col">

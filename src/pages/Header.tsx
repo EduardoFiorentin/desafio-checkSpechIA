@@ -21,10 +21,18 @@ export const Header = () => {
                 {
                     menu && (
                     <ul className="fixed flex flex-col right-0 top-0 h-screen bg-black pt-[90px] text-2xl w-1/2 items-center">
-                        <li className='mb-[20px]'>Soluções</li>
-                        <li className='mb-[20px]'>Clientes</li>
-                        <li className='mb-[20px]'>Preços</li>
-                        <li className='mb-[20px]'>Contato</li>
+                        <a href="#about">
+                            <li className='mb-[20px]'>Sobre</li>
+                        </a>
+                        <a href="#solutions">
+                            <li className='mb-[20px]'>Soluções</li>
+                        </a>
+                        <a href="#subscriptions">
+                            <li className='mb-[20px]'>Planos</li>
+                        </a>
+                        <a href="#contact">
+                            <li className='mb-[20px]'>Contato</li>
+                        </a>
                     </ul>
                     )
                 }
