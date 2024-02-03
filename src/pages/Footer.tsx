@@ -3,7 +3,7 @@ import { Instagram, Twitter, Facebook, Send, Copyright } from "lucide-react"
 export const Footer = () => {
     return (
         <footer className="bg-darkgrey font-imprima flex flex-col items-center">
-            <ul className="py-[30px]">
+            <ul className="py-[30px] md:flex md:w-[500px] md:justify-evenly">
                 <a href="#header">
                     <li className='pb-[10px]'>Inicio</li>
                 </a>
@@ -22,7 +22,7 @@ export const Footer = () => {
             </ul>
 
             <div className="">
-                <div className="flex w-[300px] justify-evenly">
+                <div className="flex justify-evenly">
                     <Instagram size={32}/>
                     <Twitter size={32}/>
                     <Facebook size={32}/>

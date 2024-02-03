@@ -61,24 +61,24 @@ export const Contacts = () => {
     }
 
     return (
-        <section className="bg-blue min-h-screen font-imprima" id='contact'>
+        <section className="bg-blue h-auto font-imprima pb-[50px]" id='contact'>
             <h2 className="text-center py-[40px] text-[40px]">Entre em <span className="font-bold">Contato</span></h2>
-            <div className='w-[300px] mx-auto'>
+            <div className='w-[300px] mx-auto md:w-[70%]'>
 
-                <div className="">
+                <div className="md:flex">
                     <input
                         type="text"
                         name=""
                         id=""
                         placeholder='Nome'
-                        className='w-full p-[10px] h-[36px] rounded-3xl focus:outline-0 bg-inputblue border text-white border-black mb-[15px]'
+                        className='w-full p-[10px] h-[36px] rounded-3xl focus:outline-0 bg-inputblue border text-white border-black mb-[15px] md:w-[48%]'
                         value={name}
                         onFocus={() => setErrorName(null)}
                         onChange={event => setName(event.target.value)}
                     />
                     <PhoneInput
                         defaultCountry="br"
-                        className='mb-[15px]'
+                        className='w-full mb-[15px] md:w-[48%] ml-[4%]md:'
                         ref={inputRef}
                         value={phone}
                         onChange={phone => {
