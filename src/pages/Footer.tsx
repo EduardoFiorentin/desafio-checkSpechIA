@@ -1,6 +1,6 @@
 import { Instagram, Twitter, Facebook, Send, Copyright } from "lucide-react"
 
-export const Footer = () => {
+export const Footer = ({lang}: {lang: string}) => {
     return (
         <footer className="bg-darkgrey font-imprima flex flex-col items-center">
             <ul className="py-[30px] md:flex md:w-[500px] md:justify-evenly">
@@ -8,7 +8,7 @@ export const Footer = () => {
                     <li className='pb-[10px]'>Inicio</li>
                 </a>
                 <a href="#about">
-                    <li className='pb-[10px]'>Sobre Nós</li>
+                    <li className='pb-[10px]'>Nosso Produto</li>
                 </a>
                 <a href="#solutions">
                     <li className='pb-[10px]'>Soluções</li>

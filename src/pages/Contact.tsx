@@ -4,9 +4,10 @@ import { useRef, useState } from 'react';
 import { Button } from '../conponents/Button';
 
 import { emailValidate, messageValidate, nameValidate, phoneValidate } from '../utils/validations';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
-export const Contacts = () => {
+export const Contacts = ({lang}: {lang: string}) => {
 
     const [name, setName] = useState('')
     const [errorName, setErrorName] = useState<string | null>(null)
@@ -16,17 +17,20 @@ export const Contacts = () => {
     const [errorMessage, setErrorMessage] = useState<string | null>(null)
     const [checked, setChecked] = useState(false)
     const [errorChecked, setErrorChecked] = useState<string | null>(null)
+    const [errorCaptcha, setErrorCaptcha] = useState<string | null>(null)
     
     const [phone, setPhone] = useState('')
-    const inputRef = useRef(null);
 
-    const test = () => {
-        if (inputRef.current?.state?.country?.iso2.length == 2) {
-            console.log(2)
+    const inputRef = useRef(null);
+    const captcha = useRef(null)
+
+    const testCaptcha = () => {
+        if (captcha.current?.getValue()) {
+            return true
+        } else {
+            return false
         }
     }
-
-
 
     const handleSubmit = () => {
         if (!nameValidate(name)) {
@@ -44,7 +48,9 @@ export const Contacts = () => {
         if (!checked) {
             setErrorChecked("Aceite os termos")
         }
-
+        if (!testCaptcha()) {
+            setErrorCaptcha("Faça o teste acima!")
+        }
         // phone 
         const iso = inputRef.current?.state?.country?.iso2.toUpperCase()
         if (!phoneValidate(phone, iso)) {
@@ -78,12 +84,8 @@ export const Contacts = () => {
                         className='w-full mb-[15px] md:w-[48%] md:ml-[4%]'
                         ref={inputRef}
                         value={phone}
-                        onChange={phone => {
-                            setPhone(phone)
-                            test()
+                        onChange={phone => {setPhone(phone)}
                         }
-                        }
-                        onBlur={() => test}
                     />
                 </div>
 
@@ -111,9 +113,20 @@ export const Contacts = () => {
                     onFocus={() => setErrorMessage(null)}
                 />
 
-                <div className="flex items-center w-full">
-                    <input type="checkbox" name="" id="" className='w-[20px] h-[20px] rounded' checked={checked} onChange={() => {setChecked(!checked)}} onFocus={() => setErrorChecked(null)}/>
-                    <p className='text-[.8rem] ml-[10px] text-white'>Eu concordo com a Política de Privacidade.</p>
+                <div className='flex flex-col justify-center md:flex-row'>
+                    <div className="flex items-center w-full mb-[20px]">
+                        <input type="checkbox" name="" id="" className='w-[20px] h-[20px] rounded' checked={checked} onChange={() => {setChecked(!checked)}} onFocus={() => setErrorChecked(null)}/>
+                        <p className='text-[.8rem] ml-[10px] text-white'>Eu concordo com a Política de Privacidade.</p>
+                    </div>
+                    <div className="mb-[20px] m-0">
+                        <ReCAPTCHA
+                            sitekey="6Lf6_GcpAAAAALCH-v7efsUilxEdF-J53jJD9f-M"
+                            className='w-full'
+                            size='normal'
+                            onChange={() => setErrorCaptcha(null)}
+                            ref={captcha}
+                        />
+                    </div>
                 </div>
 
                 {errorName && (
@@ -127,6 +140,9 @@ export const Contacts = () => {
                 )}
                 {errorChecked && (
                     <p className='text-center'>Aceite os termos</p>
+                )}
+                {errorCaptcha && (
+                    <p className='text-center'>Faça o teste acima</p>
                 )}
 
                 <Button className='text-lightpurple font-black shadow-none' content='Enviar' onClick={handleSubmit}/>

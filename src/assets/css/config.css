@@ -26,3 +26,15 @@ html {
     border-top-left-radius: 1.5rem !important;
     padding-left: 5px !important;
 }
+
+.captcha, #recaptcha_image, #recaptcha_image img {
+    width: 100% !important;
+}
+#recaptcha_image {
+    width: 100% !important;
+}
+#recaptcha_image {
+    width: 100% ! important;
+    max-width:400px;
+    height: auto !important;
+}

@@ -2,7 +2,7 @@ import { AudioLines, MessageSquareText, Heart } from "lucide-react"
 import { Card } from "../conponents/Card"
 
 
-export const Solutions = () => {
+export const Solutions = ({lang}: {lang: string}) => {
     return (
         <section className="bg-blue" id="solutions">
             <h2 className="text-center py-[40px] text-[40px] mb-[40px]">Nossas <span className="font-bold">Soluções</span></h2>
