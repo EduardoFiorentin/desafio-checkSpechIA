@@ -4,7 +4,7 @@ import { Card } from "../conponents/Card"
 
 export const Solutions = () => {
     return (
-        <section className="bg-blue min-h-screen " id="solutions">
+        <section className="bg-blue" id="solutions">
             <h2 className="text-center py-[40px] text-[40px] mb-[40px]">Nossas <span className="font-bold">Soluções</span></h2>
             <div className="flex flex-col items-center lg:flex-row justify-center items-center">
                 <Card 

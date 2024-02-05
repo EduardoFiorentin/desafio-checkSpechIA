@@ -23,7 +23,7 @@ export default {
       },
       boxShadow: {
         'button':"-2px 2px 16px 0px #7D63C666",
-        'circle': "0px 0px 3px 5px #7D63C688"
+        'circle': "0px 0px 0px 3px #4A0FF399"
       }
     },
     fontFamily: {

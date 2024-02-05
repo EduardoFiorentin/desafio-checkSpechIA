@@ -63,7 +63,7 @@ export const Contacts = () => {
     return (
         <section className="bg-blue h-auto font-imprima pb-[50px]" id='contact'>
             <h2 className="text-center py-[40px] text-[40px]">Entre em <span className="font-bold">Contato</span></h2>
-            <div className='w-[300px] mx-auto md:w-[70%]'>
+            <div className='w-[300px] mx-auto md:w-[70%] max-w-[1000px]'>
 
                 <div className="md:flex">
                     <input
@@ -78,7 +78,7 @@ export const Contacts = () => {
                     />
                     <PhoneInput
                         defaultCountry="br"
-                        className='w-full mb-[15px] md:w-[48%] ml-[4%]md:'
+                        className='w-full mb-[15px] md:w-[48%] md:ml-[4%]'
                         ref={inputRef}
                         value={phone}
                         onChange={phone => {

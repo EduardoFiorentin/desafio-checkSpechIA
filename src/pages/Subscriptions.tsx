@@ -6,7 +6,7 @@ export const Subscription = () => {
             <h2 className="text-center py-[40px] text-[40px]">Conheça nossos <span className="font-bold">Planos</span></h2>
             
             <div className="flex flex-col md:items-center max-w-screen lg:flex-row lg:justify-center h-auto lg:items-stretch lg:justify-evenly max-w-[1100px] m-auto">
-                <div className="h-auto flex flex-col bg-darkblue pb-[50px] md:w-[60%] lg:w-[30%] px-[20px] ">
+                <div className="h-auto flex flex-col bg-darkblue pb-[50px] md:w-[60%] lg:w-[30%] px-[20px] lg:mt-[5%]">
                     <h3 className="text-[36px] text-center py-[20px] font-bold">Begginer</h3>
                     <div className="border-t border-b mb-[20px] py-[20px]">
                         <p className=""><span className="text-[30px]">29</span> / por mês</p>
@@ -31,7 +31,10 @@ export const Subscription = () => {
                     </div>
                     <Button content="Assinar" href="#contact" className="text-lightpurple shadow-none border-lightpurple"/>
                 </div>
-                <div className="h-auto flex flex-col bg-lightblue px-[15px] my-[20px] pb-[50px] md:w-[60%] lg:w-[30%] lg:h-full lg:my-[0]">
+                <div className="h-auto flex flex-col bg-lightblue px-[15px] my-[40px] pb-[50px] md:w-[60%] lg:w-[30%] lg:h-full lg:my-[0] relative">
+                    <div className="bg-white w-2/4 h-[45px] flex items-center justify-center absolute top-[-3%] left-[25%]">
+                        <p className="text-lightblue text-center font-bold">MAIS POPULAR</p>
+                    </div>
                     <h3 className="text-[36px] text-center py-[20px] font-bold">Business</h3>
                     <div className="border-t border-b mb-[20px] py-[20px]">
                         <p className=""><span className="text-[30px]">44</span> / por mês</p>
@@ -57,7 +60,7 @@ export const Subscription = () => {
                 
                     <Button content="Assinar" href="#contact" className="text-cian shadow-none border-cian"/>
                 </div>
-                <div className=" h-auto flex flex-col bg-darkblue p-[15px] pb-[50px] md:w-[60%] lg:w-[30%]  lg:h-[100%]">
+                <div className=" h-auto flex flex-col bg-darkblue p-[15px] pb-[50px] md:w-[60%] lg:w-[30%] lg:mt-[5%]">
                     <h3 className="text-[36px] text-center py-[20px] font-bold">Enterprise</h3>
                     <div className="border-t border-b mb-[20px] py-[20px]">
                         <p className="text-center"><span className="text-[20px] font-bold">Preço sob consulta</span></p>
