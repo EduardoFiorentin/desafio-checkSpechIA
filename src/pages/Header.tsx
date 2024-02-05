@@ -3,11 +3,20 @@ import { useState } from 'react'
 import { Menu } from 'lucide-react'
 import { Button } from '../conponents/Button'
 import image from '../assets/img/header-img.png'
+import { TextSlider } from '../conponents/Slider'
+import { Slide } from '@mui/material'
 
 export const Header = () => {
     const [menu, setMenu] = useState(false)
 
     const handleToggleMenu = () => setMenu(!menu)
+
+    const texts = [
+        "Precisão, Sentimento e Confiabilidade em Cada Palavra!",
+        "Transcrição inteligente para projetos impactantes.",
+        "Simplifique suas transcrições, amplifique seus resultados."
+    ]
+
 
     return (
         <header className="min-h-screen bg-header bg-cover bg-top bg-center font-imprima pb-[30px]" id='header'>
@@ -55,7 +64,8 @@ export const Header = () => {
             </nav>
 
             <div className='pt-[90px] md:flex justify-center items-center'>
-                <p className='text-[2rem] lg:text-[3rem] text-center mx-[50px] md:w-[50%]'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p>
+                <TextSlider texts={texts}/>
+                {/* <p className='text-[2rem] lg:text-[3rem] text-center mx-[50px] md:w-[50%]'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p> */}
                 <img src={image} alt="" className='hidden w-[350px] h-[300px] md:flex mr-[30px]'/>
             </div>
 

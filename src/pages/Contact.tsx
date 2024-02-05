@@ -4,7 +4,6 @@ import { useRef, useState } from 'react';
 import { Button } from '../conponents/Button';
 
 import { emailValidate, messageValidate, nameValidate, phoneValidate } from '../utils/validations';
-import { CountryCode } from 'libphonenumber-js';
 
 
 export const Contacts = () => {
@@ -19,8 +18,6 @@ export const Contacts = () => {
     const [errorChecked, setErrorChecked] = useState<string | null>(null)
     
     const [phone, setPhone] = useState('')
-    const [errorPhone, setErrorPhone] = useState<string | null>(null)
-    const [countryCode, setCountryCode] = useState<CountryCode>('BR')
     const inputRef = useRef(null);
 
     const test = () => {
