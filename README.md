@@ -9,7 +9,7 @@ O [desafio](https://github.com/mostqi/desafios-frontend/tree/main/desafio-01) fo
 ## Instruções de Instalação
 
 ### Iniciar em servidor local
-1. Clone este repositório: `https://github.com/EduardoFiorentin/desafio-checkSpechIA.git``
+1. Clone este repositório: `https://github.com/EduardoFiorentin/desafio-checkSpechIA.git`
 2. Instale as dependências: `npm install`
 3. Acesse o diretório 'src' e inicie a aplicação localmente: `npm run dev`
 
