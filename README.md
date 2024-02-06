@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Desafio SearchDevs  
+Esta é uma aplicação web que desenvolvi para aprimorar minhas habilidades com as principais tecnologias do mercado front end, tais como React JS, TypeScript, CSS, TailWind, Lucide e também expandir minhas habilidades com novas tecnologias, como reCAPTHA e no ambiente de design de interfaces com o Figma
 
-Currently, two official plugins are available:
+## Visão geral 
+Esta é uma landing page desenvolvida para apresentar o conjunto fictício de APIs CheckSpeech IA que trabalha com conversão de falas em texto e interpretação de sentimentos. O design é 100% horiginal e desenvolvido por mim utilizando Figma e implementado  com ReactJS. 
+O [desafio](https://github.com/mostqi/desafios-frontend/tree/main/desafio-01) foi horiginalmente proposto pelo perfil do github [mostqi](https://github.com/mostqi).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instruções de Instalação
 
-## Expanding the ESLint configuration
+### Iniciar em servidor local
+1. Clone este repositório: `https://github.com/EduardoFiorentin/desafio-checkSpechIA.git``
+2. Instale as dependências: `npm install`
+3. Acesse o diretório 'src' e inicie a aplicação localmente: `npm run dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Acessar deploy 
+Acesse o link: [desafio-checkSpeechIA]([https://eduardofiorentin.github.io/desafio-checkSpechIA/)
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias Utilizadas
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- React JS - 18.2.0
+- Lucide React - 0.316.0
+- React Slick - 0.30.1
+- LibPhoneNumberJS - 1.10.55
+- MaterialUI - 5.15.7
+- Vite - 5.0.8
+- TypeScript - 5.2.2
+- TailWind - 3.4.1
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Referências e Recursos
+
+- [Criador do desafio](https://github.com/mostqi)
+- [Repositório original do desafio](https://github.com/mostqi/desafios-frontend/tree/main/desafio-01)
+- [Documentação do React](https://reactjs.org/docs/getting-started.html)
+- [Documentação do Lucide](https://lucide.dev/guide/packages/lucide-react)
+- [Documentação do Vite](https://vitejs.dev/)
+- [Documentação do TypeScript](https://www.typescriptlang.org/)
+- [Documentação do MaterialUI](https://mui.com/material-ui/)
+- [Documentação do TailWind](https://tailwindcss.com/)
+- [Documentação do LibPhoneNumberJS](https://www.npmjs.com/package/libphonenumber-js)
+- [Documentação do Slick](https://react-slick.neostack.com/)
