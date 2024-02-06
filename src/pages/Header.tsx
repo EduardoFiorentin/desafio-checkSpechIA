@@ -9,7 +9,7 @@ export const Header = () => {
     const [menu, setMenu] = useState(false)
 
     const handleToggleMenu = () => setMenu(!menu)
-
+    
     return (
         <header className="min-h-screen bg-header bg-cover bg-top bg-center font-imprima pb-[30px]" id='header'>
             <nav className="flex justify-between w-full fixed bg-blue border-b z-10 items-center">
