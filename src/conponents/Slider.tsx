@@ -1,13 +1,8 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import languages from '../lenguages/lenguages.json'
-import { useState } from 'react';
 
-export const TextSlider = ({lang}: {lang: string}) => {
-  const [content, setContent] = useState(languages[lang])
-  
-
+export const TextSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -23,9 +18,9 @@ export const TextSlider = ({lang}: {lang: string}) => {
 
   return (
     <Slider {...settings} className='w-[80%] m-auto md:w-[50%]'>
-        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'>{content?.slider?.a}</p> 
-        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'>{content?.slider?.b}</p>
-        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'>{content?.slider?.c}</p>
+        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p> 
+        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'><span className='font-black h-3/4'>Transcrição inteligente</span> para projetos impactantes.</p>
+        <p className='text-[2rem] lg:text-[3rem] text-center md:w-[50%] w-full'>Simplifique suas transcrições, <span className='font-black h-3/4'>amplifique seus resultados.</span></p>
     </Slider>
   );
 };

@@ -1,7 +1,7 @@
 import { Button } from "../conponents/Button"
 import image from '../assets/img/about-img.jpg'
 
-export const About = ({lang}: {lang: string}) => {
+export const About = () => {
     return (
         <section id="about" className="bg-blue text-[40px]">
             <h2 className="text-center py-[40px]">Nosso <span className="font-bold">Produto</span></h2>

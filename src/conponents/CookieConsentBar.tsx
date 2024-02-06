@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CookieConsentBar = ({lang}: {lang: string}) => {
+const CookieConsentBar = () => {
   const [accepted, setAccepted] = useState(false);
 
   const acceptCookies = () => {

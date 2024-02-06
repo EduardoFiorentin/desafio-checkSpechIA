@@ -1,6 +1,6 @@
 import { Instagram, Twitter, Facebook, Send, Copyright } from "lucide-react"
 
-export const Footer = ({lang}: {lang: string}) => {
+export const Footer = () => {
     return (
         <footer className="bg-darkgrey font-imprima flex flex-col items-center">
             <ul className="py-[30px] md:flex md:w-[500px] md:justify-evenly">

@@ -5,13 +5,8 @@ import { Button } from '../conponents/Button'
 import image from '../assets/img/header-img.png'
 import { TextSlider } from '../conponents/Slider'
 
-import languages from '../lenguages/lenguages.json'
-// import { LanguageTranslations } from '../lenguages/types'
-
-
-export const Header = ({lang}: {lang: string}) => {
+export const Header = () => {
     const [menu, setMenu] = useState(false)
-    const [content, setContent] = useState(languages[lang])
 
     const handleToggleMenu = () => setMenu(!menu)
 
@@ -31,16 +26,16 @@ export const Header = ({lang}: {lang: string}) => {
                     menu && (
                     <ul className="fixed flex flex-col right-0 top-0 h-screen bg-black pt-[90px] text-2xl w-1/2 items-center">
                         <a href="#about">
-                            <li className=''>{content.menu.product}</li>
+                            <li className='mb-[20px]'>Produto</li>
                         </a>
                         <a href="#solutions">
-                            <li className=''>{content.menu.solutions}</li>
+                            <li className='mb-[20px]'>Soluções</li>
                         </a>
                         <a href="#subscriptions">
-                            <li className=''>{content.menu.subscriptions}</li>
+                            <li className='mb-[20px]'>Planos</li>
                         </a>
                         <a href="#contact">
-                            <li className=''>{content.menu.contact}</li>
+                            <li className='mb-[20px]'>Contato</li>
                         </a>
                     </ul>
                     )
@@ -48,22 +43,22 @@ export const Header = ({lang}: {lang: string}) => {
 
                     <ul className="hidden md:flex w-[50%] justify-evenly">
                         <a href="#about">
-                            <li className=''>{content.menu.product}</li>
+                            <li className=''>Produto</li>
                         </a>
                         <a href="#solutions">
-                            <li className=''>{content.menu.solutions}</li>
+                            <li className=''>Soluções</li>
                         </a>
                         <a href="#subscriptions">
-                            <li className=''>{content.menu.subscriptions}</li>
+                            <li className=''>Planos</li>
                         </a>
                         <a href="#contact">
-                            <li className=''>{content.menu.contact}</li>
+                            <li className=''>Contato</li>
                         </a>
                     </ul>
             </nav>
 
             <div className='pt-[90px] md:flex justify-center items-center'>
-                <TextSlider lang={lang}/>
+                <TextSlider/>
                 {/* <p className='text-[2rem] lg:text-[3rem] text-center mx-[50px] md:w-[50%]'><span className='font-black h-3/4'>Precisão, Sentimento e Confiabilidade</span> em Cada Palavra!</p> */}
                 <img src={image} alt="" className='hidden w-[350px] h-[300px] md:flex mr-[30px]'/>
             </div>

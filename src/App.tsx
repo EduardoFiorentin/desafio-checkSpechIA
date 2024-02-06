@@ -7,23 +7,19 @@ import 'react-international-phone/style.css';
 import { Contacts } from './pages/Contact';
 import { Footer } from './pages/Footer';
 import CookieConsentBar from './conponents/CookieConsentBar';
-import languages from './lenguages/lenguages.json'
 
 function App() {
-  // pt - portugues
-  // en - inglês
-  const [lang, setLang] = useState<string>('pt')
 
   return (
     <>
-      <Header lang={lang}/>
-      <About lang={lang}/>
-      <Solutions lang={lang}/>
-      <Subscription lang={lang}/>
-      <Contacts lang={lang}/>
-      <Footer lang={lang}/>
+      <Header/>
+      <About/>
+      <Solutions/>
+      <Subscription/>
+      <Contacts/>
+      <Footer/>
       
-      <CookieConsentBar lang={lang}/>
+      <CookieConsentBar/>
     </>
   )
 }

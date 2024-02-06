@@ -1,6 +1,6 @@
 import { Button } from "../conponents/Button"
 
-export const Subscription = ({lang}: {lang: string}) => {
+export const Subscription = () => {
     return (
         <section id="subscriptions" className="bg-blue min-h-screen">
             <h2 className="text-center py-[40px] text-[40px]">Conheça nossos <span className="font-bold">Planos</span></h2>

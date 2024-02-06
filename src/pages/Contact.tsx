@@ -7,7 +7,7 @@ import { emailValidate, messageValidate, nameValidate, phoneValidate } from '../
 import ReCAPTCHA from "react-google-recaptcha";
 
 
-export const Contacts = ({lang}: {lang: string}) => {
+export const Contacts = () => {
 
     const [name, setName] = useState('')
     const [errorName, setErrorName] = useState<string | null>(null)
