@@ -25,7 +25,7 @@ export const Contacts = () => {
     const captcha = useRef(null)
 
     const testCaptcha = () => {
-        if (captcha.current?.getValue()) {
+        if ((captcha?.current as any).getValue()) {
             return true
         } else {
             return false
@@ -52,7 +52,7 @@ export const Contacts = () => {
             setErrorCaptcha("Faça o teste acima!")
         }
         // phone 
-        const iso = inputRef.current?.state?.country?.iso2.toUpperCase()
+        const iso = (inputRef.current as any).state?.country?.iso2.toUpperCase() as any
         if (!phoneValidate(phone, iso)) {
             console.log("Não passou")
         }
