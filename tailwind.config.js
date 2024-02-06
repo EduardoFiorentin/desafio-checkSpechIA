@@ -19,7 +19,7 @@ export default {
         'black': "#000000"
       },
       backgroundImage: {
-        'header':"url('./src/assets/img/header-background.png')"
+        'header':"url('/src/assets/img/header-background.png')"
       },
       boxShadow: {
         'button':"-2px 2px 16px 0px #7D63C666",
