@@ -14,7 +14,7 @@ O [desafio](https://github.com/mostqi/desafios-frontend/tree/main/desafio-01) fo
 3. Acesse o diretório 'src' e inicie a aplicação localmente: `npm run dev`
 
 ### Acessar deploy 
-Acesse o link: [desafio-checkSpeechIA]([https://eduardofiorentin.github.io/desafio-checkSpechIA/)
+Acesse o link: [desafio-checkSpeechIA](https://eduardofiorentin.github.io/desafio-checkSpechIA/)
 
 ## Tecnologias Utilizadas
 
