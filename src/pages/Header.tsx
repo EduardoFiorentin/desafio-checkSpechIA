@@ -5,8 +5,13 @@ import { Button } from '../conponents/Button'
 import image from '../assets/img/header-img.png'
 import { TextSlider } from '../conponents/Slider'
 
+import languages from '../lenguages/lenguages.json'
+// import { LanguageTranslations } from '../lenguages/types'
+
+
 export const Header = ({lang}: {lang: string}) => {
     const [menu, setMenu] = useState(false)
+    const [content, setContent] = useState(languages[lang])
 
     const handleToggleMenu = () => setMenu(!menu)
 
@@ -26,16 +31,16 @@ export const Header = ({lang}: {lang: string}) => {
                     menu && (
                     <ul className="fixed flex flex-col right-0 top-0 h-screen bg-black pt-[90px] text-2xl w-1/2 items-center">
                         <a href="#about">
-                            <li className='mb-[20px]'>Produto</li>
+                            <li className=''>{content.menu.product}</li>
                         </a>
                         <a href="#solutions">
-                            <li className='mb-[20px]'>Soluções</li>
+                            <li className=''>{content.menu.solutions}</li>
                         </a>
                         <a href="#subscriptions">
-                            <li className='mb-[20px]'>Planos</li>
+                            <li className=''>{content.menu.subscriptions}</li>
                         </a>
                         <a href="#contact">
-                            <li className='mb-[20px]'>Contato</li>
+                            <li className=''>{content.menu.contact}</li>
                         </a>
                     </ul>
                     )
@@ -43,16 +48,16 @@ export const Header = ({lang}: {lang: string}) => {
 
                     <ul className="hidden md:flex w-[50%] justify-evenly">
                         <a href="#about">
-                            <li className=''>Produto</li>
+                            <li className=''>{content.menu.product}</li>
                         </a>
                         <a href="#solutions">
-                            <li className=''>Soluções</li>
+                            <li className=''>{content.menu.solutions}</li>
                         </a>
                         <a href="#subscriptions">
-                            <li className=''>Planos</li>
+                            <li className=''>{content.menu.subscriptions}</li>
                         </a>
                         <a href="#contact">
-                            <li className=''>Contato</li>
+                            <li className=''>{content.menu.contact}</li>
                         </a>
                     </ul>
             </nav>
