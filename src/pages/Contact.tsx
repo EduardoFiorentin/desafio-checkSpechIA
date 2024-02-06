@@ -34,15 +34,12 @@ export const Contacts = () => {
 
     const handleSubmit = () => {
         if (!nameValidate(name)) {
-            console.log("nome não passa")
             setErrorName("Nome não é válido!")
         }
         if (!emailValidate(email)) {
-            console.log("email não passa")
             setErrorEmail("Email não é válido!")
         }
         if (!messageValidate(message)) {
-            console.log("message não passa")
             setErrorMessage("Mensagem não é válida!")
         }
         if (!checked) {
@@ -54,11 +51,9 @@ export const Contacts = () => {
         // phone 
         const iso = (inputRef.current as any).state?.country?.iso2.toUpperCase() as any
         if (!phoneValidate(phone, iso)) {
-            console.log("Não passou")
         }
 
         if (!errorName && !errorEmail && !errorMessage && checked) {
-            console.log("Passado")
             window.alert("Mensagem enviada")
         }
     }
